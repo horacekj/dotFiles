@@ -83,3 +83,21 @@ au BufRead,BufNewFile *.thtml setfiletype html
 
 " color column at 80 characters
 set colorcolumn=80
+
+filetype plugin indent on
+
+set mouse=a
+
+set clipboard+=unnamed  " use the clipboards of vim and win
+set paste               " Paste from a windows or from vim
+set go+=a               " Visual selection automatically copied to the clipboard
+
+autocmd FileType tex setlocal spell spelllang=en_us,cz
+autocmd FileType markdown setlocal spell spelllang=en_us,cz
+
+" more bash-like tab completion
+set wildmode=longest,list,full
+set wildmenu
+
+map <F6> :!make all
+map <F8> :!make all >& /dev/null &
