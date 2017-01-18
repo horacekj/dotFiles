@@ -47,23 +47,23 @@ force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+    # We have color support; assume it's compliant with Ecma-48
+    # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+    # a case would tend to support setf rather than setaf.)
+    color_prompt=yes
     else
-	color_prompt=
+    color_prompt=
     fi
 fi
 
 
-BOLD="\[\033[1m\]"
-RED="\[\033[1;31m\]"
-GREEN="\[\e[32;1m\]"
-BLUE="\[\e[34;1m\]"
-OFF="\[\033[m\]"
-GRAY="\[\033[00m\]"
-#EUID=$?
+BOLD="\033[1m"
+RED="\033[1;31m"
+GREEN='\e[32;1m'
+BLUE="\e[34;1m"
+OFF="\033[m"
+GRAY="\033[00m"
+CYAN="\e[1;36m"
 
 get_exit_status() {
    es=$?
@@ -75,13 +75,15 @@ get_exit_status() {
    fi
 }
 
-if [ "$color_prompt" = yes ]; then
-    #apophis` own PS1
-    PS1="${debian_chroot:+($debian_chroot)}${RED}\u@\h${GRAY}:${BLUE}\w${GRAY} \$ \$([[ \$? != 0 ]] && echo \"${RED}:( \")${GRAY}"
+source /etc/bash_completion.d/git-prompt
+export GIT_PS1_SHOWDIRTYSTATE=1
 
+if [ "$color_prompt" = yes ]; then
+    PS1="${debian_chroot:+($debian_chroot)}${RED}\u@\h${GRAY}:${BLUE}\w${GRAY}"'$(__git_ps1 " (${CYAN}%s${GRAY})") '"\$([[ \$? != 0 ]] && echo \"${RED}:( \")"${GRAY}'\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
+
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
@@ -133,3 +135,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+export GOPATH=$HOME/gopath
+export PATH=$GOPATH:$GOPATH/bin:$PATH
