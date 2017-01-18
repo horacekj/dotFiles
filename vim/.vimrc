@@ -80,7 +80,7 @@ map <c-m> <c-w>4>
 au BufRead,BufNewFile *.thtml setfiletype html
 
 " color column at 80 characters
-set colorcolumn=80
+set colorcolumn=80,100,120
 
 filetype plugin indent on
 
