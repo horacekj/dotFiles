@@ -52,7 +52,6 @@ set showmatch
 set mat=2
 
 set ai "Auto indent
-set si "Smart indent
 set wrap "Wrap lines
 
 " move accross splits with CTRL+hjkl
