@@ -88,9 +88,7 @@ filetype plugin indent on
 
 set mouse=a
 
-set clipboard+=unnamed  " use the clipboards of vim and win
-set paste               " Paste from a windows or from vim
-set go+=a               " Visual selection automatically copied to the clipboard
+set clipboard=unnamedplus
 
 autocmd FileType tex setlocal spell spelllang=en_us,cz
 autocmd FileType markdown setlocal spell spelllang=en_us,cz
