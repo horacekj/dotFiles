@@ -91,6 +91,8 @@ set clipboard=unnamedplus
 
 autocmd FileType tex setlocal spell spelllang=en_us,cz
 autocmd FileType markdown setlocal spell spelllang=en_us,cz
+autocmd FileType javascript setlocal expandtab
+autocmd FileType html.handlebars setlocal expandtab
 
 " more bash-like tab completion
 set wildmode=longest,list,full
