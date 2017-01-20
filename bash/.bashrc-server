@@ -57,14 +57,14 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 
-BOLD="\033[1m"
-RED="\033[1;31m"
-GREEN='\e[32;1m'
-BLUE="\e[34;1m"
-OFF="\033[m"
-GRAY="\033[00m"
-CYAN="\e[1;36m"
-YELLOW="\e[1;33m"
+BOLD="\[\033[1m\]"
+RED="\[\033[1;31m\]"
+GREEN="\[\e[32;1m\]"
+BLUE="\[\e[34;1m\]"
+OFF="\[\033[m\]"
+GRAY="\[\033[00m\]"
+CYAN="\[\e[1;36m\]"
+YELLOW="\[\e[1;33m\]"
 
 get_exit_status() {
    es=$?
@@ -80,7 +80,7 @@ source /etc/bash_completion.d/git-prompt
 export GIT_PS1_SHOWDIRTYSTATE=1
 
 if [ "$color_prompt" = yes ]; then
-    PS1="${debian_chroot:+($debian_chroot)}${YELLOW}\u@\h${GRAY}:${BLUE}\w${GRAY}"'$(__git_ps1 " (${CYAN}%s${GRAY})") '"\$([[ \$? != 0 ]] && echo \"${RED}:( \")"${GRAY}'\$ '
+    PS1="${debian_chroot:+($debian_chroot)}${YELLOW}\u@\h${GRAY}:${BLUE}\w${GRAY}"'$(__git_ps1 " (\[\e[1;36m\]%s\[\033[00m\])") '"\$([[ \$? != 0 ]] && echo \"${RED}:( \")"${GRAY}"$ "
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
