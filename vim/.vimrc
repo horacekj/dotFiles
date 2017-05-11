@@ -20,7 +20,7 @@ syntax on
 
 " Special characters
 set list
-set listchars=tab:>-,trail:~,extends:>,precedes:<
+set listchars=tab:>-,trail:~,extends:>,precedes:<,nbsp:␣
 
 " Color shceme
 colorscheme elflord
