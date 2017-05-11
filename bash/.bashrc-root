@@ -139,3 +139,6 @@ fi
 
 export GOPATH=$HOME/gopath
 export PATH=$GOPATH:$GOPATH/bin:$PATH
+
+export VISUAL=vim
+export EDITOR="$VISUAL"
