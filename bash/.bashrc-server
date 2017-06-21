@@ -76,7 +76,7 @@ get_exit_status() {
    fi
 }
 
-source ~/dotFiles/git-prompt.sh
+source ~/dotFiles/bash/git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
 
 if [ "$color_prompt" = yes ]; then
