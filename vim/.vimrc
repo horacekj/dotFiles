@@ -90,6 +90,7 @@ set clipboard=unnamedplus
 
 autocmd FileType tex setlocal spell spelllang=en_us,cz
 autocmd FileType markdown setlocal spell spelllang=en_us,cz
+autocmd FileType markdown setlocal expandtab
 autocmd FileType javascript setlocal expandtab
 autocmd FileType html.handlebars setlocal expandtab
 
