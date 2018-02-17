@@ -100,3 +100,8 @@ set wildmenu
 
 map <F6> :!make all
 map <F8> :!make all >& /dev/null &
+
+nnoremap k gk
+nnoremap j gj
+nnoremap <Up> g<Up>
+nnoremap <Down> g<Down>

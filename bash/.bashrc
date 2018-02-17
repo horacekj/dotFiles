@@ -142,3 +142,6 @@ export PATH=$GOPATH:$GOPATH/bin:$PATH
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
+
+# added by travis gem
+[ -f /home/apophis/.travis/travis.sh ] && source /home/apophis/.travis/travis.sh
