@@ -105,3 +105,7 @@ nnoremap k gk
 nnoremap j gj
 nnoremap <Up> g<Up>
 nnoremap <Down> g<Down>
+
+" Allow project-specific settings
+set exrc
+set secure
