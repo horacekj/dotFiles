@@ -142,3 +142,39 @@ export PATH=$GOPATH:$GOPATH/bin:$PATH
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
+
+# Git aliases
+alias gcl='git clone'
+alias ga='git add'
+alias grm='git rm'
+alias gap='git add -p'
+alias gall='git add -A'
+alias gus='git reset HEAD'
+alias gm="git merge"
+alias gmv='git mv'
+alias g='git'
+alias gst='git status'
+alias gs='git status'
+alias gsu='git submodule update --init --recursive'
+alias gl='git pull'
+alias gp='git push'
+alias gpuo='git push --set-upstream origin'
+alias gd='git diff'
+alias gc='git commit -v'
+alias gca='git commit -v -a'
+alias gcm='git commit -v -m'
+alias gb='git branch'
+alias gba='git branch -a'
+alias gcount='git shortlog -sn'
+alias gco='git checkout'
+alias gcom='git checkout master'
+alias gcb='git checkout -b'
+alias gll='git log --graph --pretty=oneline --abbrev-commit'
+alias gg="git log --graph --pretty=format:'%C(bold)%h%Creset%C(magenta)%d%Creset %s %C(yellow)<%an> %C(cyan)(%cr)%Creset' --abbrev-commit --date=relative"
+alias ggs="gg --stat"
+alias gwc="git whatchanged"
+alias gt="git tag"
+alias gnew="git log HEAD@{1}..HEAD@{0}"
+alias gcaa="git commit -a --amend -C HEAD"
+alias gcsam="git commit -S -am"
+alias gstl="git stash list"
