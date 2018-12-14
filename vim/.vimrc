@@ -23,7 +23,7 @@ set list
 set listchars=tab:>-,trail:~,extends:>,precedes:<,nbsp:␣
 
 " Color shceme
-colorscheme elflord
+colorscheme peachpuff
 
 " tab = 4 spaces
 set shiftwidth=4
