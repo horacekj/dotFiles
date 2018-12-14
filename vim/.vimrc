@@ -82,8 +82,6 @@ au BufRead,BufNewFile *.thtml setfiletype html
 " color column at 80 characters
 set colorcolumn=80,100,120
 
-filetype plugin indent on
-
 set mouse=a
 
 set clipboard=unnamedplus
@@ -95,6 +93,7 @@ autocmd FileType javascript setlocal expandtab
 autocmd FileType html.handlebars setlocal expandtab
 autocmd FileType gitcommit setlocal textwidth=72
 autocmd FileType gitcommit setlocal colorcolumn=72
+au BufRead,BufNewFile *.v   set filetype=coq 
 
 " more bash-like tab completion
 set wildmode=longest,list,full
