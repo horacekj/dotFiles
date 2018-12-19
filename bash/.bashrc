@@ -138,7 +138,6 @@ if ! shopt -oq posix; then
 fi
 
 export GOPATH=$HOME/gopath
-export PATH=$GOPATH:$GOPATH/bin:$PATH
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
@@ -178,6 +177,6 @@ alias ggs="gg --stat"
 alias gwc="git whatchanged"
 alias gt="git tag"
 alias gnew="git log HEAD@{1}..HEAD@{0}"
-alias gcaa="git commit -a --amend -C HEAD"
+alias gcaa="git commit -a --amend"
 alias gcsam="git commit -S -am"
 alias gstl="git stash list"
