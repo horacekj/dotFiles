@@ -161,7 +161,7 @@ alias gsu='git submodule update --init --recursive'
 alias gl='git pull'
 alias gp='git push'
 alias gpuo='git push --set-upstream origin'
-alias gd='git diff'
+alias gd='git diff --word-diff=color'
 alias gc='git commit -v'
 alias gca='git commit -v -a'
 alias gcm='git commit -v -m'
@@ -172,6 +172,7 @@ alias gco='git checkout'
 alias gcom='git checkout master'
 alias gcb='git checkout -b'
 alias gll='git log --graph --pretty=oneline --abbrev-commit'
+alias glp='git log -p --word-diff=color'
 alias gg="git log --graph --pretty=format:'%C(bold)%h%Creset%C(magenta)%d%Creset %s %C(yellow)<%an> %C(cyan)(%cr)%Creset' --abbrev-commit --date=relative"
 alias ggs="gg --stat"
 alias gwc="git whatchanged"
