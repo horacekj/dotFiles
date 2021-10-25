@@ -80,9 +80,10 @@ source /etc/bash_completion.d/git-prompt
 export GIT_PS1_SHOWDIRTYSTATE=1
 
 if [ "$color_prompt" = yes ]; then
-    PS1="${debian_chroot:+($debian_chroot)}${GREEN}\u@\h${GRAY}:${BLUE}\w${GRAY}"'$(__git_ps1 " (\[\e[1;36m\]%s\[\033[00m\])") '"\$([[ \$? != 0 ]] && echo \"${RED}:( \")"${GRAY}"$ "
-else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1="${debian_chroot:+($debian_chroot)}${GREEN}\u@\h${GRAY}:${BLUE}\w${GRAY}"
+    PS1+='$(__git_ps1 " (\[\e[1;36m\]%s\[\033[00m\])")'
+    PS1+="\$([[ \$? != 0 ]] && echo \"${RED} :\ \")"${GRAY}
+    PS1+="$ "
 fi
 
 unset color_prompt force_color_prompt
@@ -100,9 +101,6 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
