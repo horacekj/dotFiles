@@ -140,9 +140,6 @@ export GOPATH=$HOME/gopath
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-# added by travis gem
-[ -f /home/apophis/.travis/travis.sh ] && source /home/apophis/.travis/travis.sh
-
 # Git aliases
 alias gcl='git clone'
 alias ga='git add'
