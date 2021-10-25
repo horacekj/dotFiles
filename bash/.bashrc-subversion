@@ -80,7 +80,7 @@ source /etc/bash_completion.d/git-prompt
 export GIT_PS1_SHOWDIRTYSTATE=1
 
 SVNP_HUGE_REPO_EXCLUDE_PATH="nufw-svn$|/tags$|/branches$"
-. ~/.subversion-prompt/subversion-prompt
+. ~/.dotFiles/subversion-prompt
 
 if [ "$color_prompt" = yes ]; then
     PS1="${debian_chroot:+($debian_chroot)}${GREEN}\u@\h${GRAY}:${BLUE}\w${GRAY}"
