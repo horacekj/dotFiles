@@ -80,6 +80,7 @@ map <c-m> <c-w>4>
 
 " thtml as html syntax
 au BufRead,BufNewFile *.thtml setfiletype html
+au BufRead,BufNewFile *.lau setfiletype tex
 
 " color column at 80 characters
 set colorcolumn=80,100,120
