@@ -25,7 +25,7 @@ set list
 set listchars=tab:>-,trail:~,extends:>,precedes:<,nbsp:␣
 
 " Color shceme
-colorscheme elflord
+colorscheme torte
 
 " tab = 4 spaces
 set shiftwidth=4
