@@ -96,7 +96,8 @@ autocmd FileType javascript setlocal expandtab
 autocmd FileType html.handlebars setlocal expandtab
 autocmd FileType gitcommit setlocal textwidth=72
 autocmd FileType gitcommit setlocal colorcolumn=72
-au BufRead,BufNewFile *.v   set filetype=coq 
+autocmd Filetype latte setlocal filetype=html
+au BufRead,BufNewFile *.v   set filetype=coq
 
 " more bash-like tab completion
 set wildmode=longest,list,full
